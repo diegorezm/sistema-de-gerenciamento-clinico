@@ -26,8 +26,6 @@ const links = ref([
         href: "/#contato"
     },
 ])
-
-
 </script>
 
 <template>
@@ -36,7 +34,6 @@ const links = ref([
         <link rel="preconnect" href="https://rsms.me/" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     </Head>
-
     <header class="bg-white px-4 py-2 shadow">
         <nav class="flex justify-between items-center">
             <div>
