@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
 use App\Http\Requests\Auth\RegisterRequest;
 use App\Services\AuthService;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -21,7 +22,7 @@ class AuthController extends Controller
     /**
      * Show login page
      */
-    public function showLogin()
+    public function showLogin(): \Inertia\Response
     {
         return Inertia::render('Auth/Login');
     }
@@ -29,7 +30,7 @@ class AuthController extends Controller
     /**
      * Handle login form submission
      */
-    public function login(LoginRequest $request)
+    public function login(LoginRequest $request): RedirectResponse
     {
         if ($this->authService->login($request->validated())) {
             return redirect()
@@ -45,7 +46,7 @@ class AuthController extends Controller
     /**
      * Show registration page
      */
-    public function showRegister()
+    public function showRegister(): \Inertia\Response
     {
         return Inertia::render('Auth/Register');
     }
@@ -53,7 +54,7 @@ class AuthController extends Controller
     /**
      * Handle registration form submission
      */
-    public function register(RegisterRequest $request)
+    public function register(RegisterRequest $request): RedirectResponse
     {
         $validatedRequest = $request->validated();
         $user = $this->authService->register($validatedRequest);
@@ -67,7 +68,7 @@ class AuthController extends Controller
     /**
      * Logout user
      */
-    public function logout(Request $request)
+    public function logout(Request $request): RedirectResponse
     {
         $this->authService->logout($request);
 
