@@ -3,40 +3,49 @@
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 
+button:hover,
+a:hover {
+    cursor: pointer;
+}
+
 @theme inline {
     --font-sans: Instrument Sans, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 .btn {
-  @apply inline-block font-semibold rounded-lg transition focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply inline-block rounded-lg font-semibold transition focus:ring-2 focus:ring-offset-2 focus:outline-none;
 }
 
 /* Tamanhos */
 .btn-sm {
-  @apply px-3 py-1.5 text-sm;
+    @apply px-3 py-1.5 text-sm;
 }
 
 .btn-md {
-  @apply px-5 py-2.5 text-base;
+    @apply px-5 py-2.5 text-base;
 }
 
 .btn-lg {
-  @apply px-6 py-3 text-lg;
+    @apply px-6 py-3 text-lg;
 }
 
 /* Estilos */
 .btn-primary {
-  @apply bg-blue-600 text-white shadow hover:bg-blue-700 focus:ring-blue-500;
+    @apply bg-blue-600 text-white shadow hover:bg-blue-700 focus:ring-blue-500;
 }
 
 .btn-secondary {
-  @apply bg-gray-600 text-white shadow hover:bg-gray-700 focus:ring-gray-500;
+    @apply bg-gray-600 text-white shadow hover:bg-gray-700 focus:ring-gray-500;
 }
 
 .btn-outline {
-  @apply border border-gray-300 text-gray-700 hover:bg-gray-100 focus:ring-gray-400;
+    @apply border border-gray-300 text-gray-700 hover:bg-gray-100 focus:ring-gray-400;
 }
 
 .btn-ghost {
-  @apply text-gray-600 hover:bg-gray-100 focus:ring-gray-300;
+    @apply text-gray-600 hover:bg-gray-100 focus:ring-gray-300;
+}
+
+body {
+    @apply bg-gray-100;
 }
