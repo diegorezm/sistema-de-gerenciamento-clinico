@@ -11,7 +11,6 @@ watch(
     (newVal) => {
         if (newVal?.success) {
             console.log('✅ SUCCESS:', newVal.success);
-            // here you could call a toast lib like vue-toastification
         }
         if (newVal?.error) {
             console.error('❌ ERROR:', newVal.error);
