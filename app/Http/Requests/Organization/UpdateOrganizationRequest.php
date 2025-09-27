@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Organization;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -22,7 +22,8 @@ class UpdateOrganizationRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            "org_id" => ['required', 'integer', 'exists:organizations,id'],
+            "title" => ['required', 'string', 'min:2', 'max:127']
         ];
     }
 }
