@@ -34,7 +34,7 @@ class AuthController extends Controller
     {
         if ($this->authService->login($request->validated())) {
             return redirect()
-                ->route('dashboard')
+                ->route('dashboard.index')
                 ->with('success', 'Bem-vindo de volta!');
         }
 
@@ -61,7 +61,7 @@ class AuthController extends Controller
         $this->authService->login(["email" => $user->email, "password" => $validatedRequest['password']]);
 
         return redirect()
-            ->route('dashboard')
+            ->route('dashboard.index')
             ->with('success', 'Conta criada com sucesso!');
     }
 
