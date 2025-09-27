@@ -9,6 +9,9 @@ use Illuminate\Http\Request;
 
 class AuthService
 {
+    /**
+     * @param array<int,mixed> $data
+     */
     public function login(array $data): bool
     {
         return Auth::attempt(
@@ -16,10 +19,12 @@ class AuthService
             $data['remember'] ?? false
         );
     }
-
+    /**
+     * @param array<int,mixed> $data
+     */
     public function register(array $data): User
     {
-        return User::create([
+        return User::query()->create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
