@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import FormInput from '@/components/FormInput.vue';
-import AppLayout from '@/layouts/AppLayout.vue';
+import GuestLayout from '@/layouts/GuestLayout.vue';
 
 import { login } from '@/actions/App/Http/Controllers/Auth/AuthController';
 import { useForm } from '@inertiajs/vue3';
@@ -20,7 +20,7 @@ function submit() {
 </script>
 
 <template>
-    <AppLayout>
+    <GuestLayout>
         <main class="mx-auto mt-16 w-full max-w-md rounded bg-white p-6 shadow-md">
             <!-- Header -->
             <div class="mb-6 flex items-center justify-center gap-2">
@@ -65,5 +65,5 @@ function submit() {
                 </p>
             </form>
         </main>
-    </AppLayout>
+    </GuestLayout>
 </template>

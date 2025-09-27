@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AppLayout from '@/layouts/AppLayout.vue';
+import GuestLayout from '@/layouts/GuestLayout.vue';
 import { Head } from '@inertiajs/vue3';
 import DoctorImage from '../../images/doctor.jpg';
 </script>
@@ -9,7 +9,7 @@ import DoctorImage from '../../images/doctor.jpg';
         <link rel="preconnect" href="https://rsms.me/" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     </Head>
-    <AppLayout>
+    <GuestLayout>
         <main class="mt-4 w-full">
             <div class="mx-auto flex max-w-7xl flex-col items-center md:flex-row">
                 <!-- Texto -->
@@ -30,5 +30,5 @@ import DoctorImage from '../../images/doctor.jpg';
                 </div>
             </div>
         </main>
-    </AppLayout>
+    </GuestLayout>
 </template>
