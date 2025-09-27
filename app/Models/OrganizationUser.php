@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class OrganizationUser extends Model
 {
@@ -14,12 +15,18 @@ class OrganizationUser extends Model
         'role',
     ];
 
-    public function organization()
+    /**
+     * @return BelongsTo<Organization,OrganizationUser>
+     */
+    public function organization(): BelongsTo
     {
         return $this->belongsTo(Organization::class);
     }
 
-    public function user()
+    /**
+     * @return BelongsTo<User,OrganizationUser>
+     */
+    public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
